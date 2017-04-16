@@ -631,7 +631,7 @@
 		params = {query: 'uid=' + Data.uid + '&auth=' + Data.auth + '&v=' + CommonConsts.VERSION};
 	}
 
-	var socket = SocketIO(Config.TESTING ? 'http://localhost:8004' : secrethitlerdev.herokuapp.com, params);
+	var socket = SocketIO(Config.TESTING ? 'http://localhost:8004' : 'https://secrethitlerdev.herokuapp.com', params);
 
 	//PUBLIC
 
