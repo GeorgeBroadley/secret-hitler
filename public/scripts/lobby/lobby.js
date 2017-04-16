@@ -78,7 +78,7 @@ var updateLobby = function(data) {
 	$('#lobby-privacy').toggle(privateGame);
 	if (privateGame) {
 		var gid = data.gid;
-		$('#lobby-private-code').html('<a href="/join/'+gid+'" target="_blank">https://secrethitler.online/join/<strong>' + gid + '</strong></a>');
+		$('#lobby-private-code').html('<a href="/join/'+gid+'" target="_blank">'+process.env.APP_URL+'/join/<strong>' + gid + '</strong></a>');
 	}
 };
 

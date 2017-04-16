@@ -1,5 +1,5 @@
 # Secret Hitler Online
-An online implementation of the tabletop game [Secret Hitler](http://secrethitler.com), built on node.js and socket.io. Play at [secrethitler.online](https://secrethitler.online).
+An online implementation of the tabletop game [Secret Hitler](http://secrethitler.com), built on node.js and socket.io. Play at [secrethitler.gg](https://secrethitler.gg).
 
 Supports 5-10 players, text or voice (beta) chat, and the game's core rule set. Game data is persisted to allow features like stat aggregation, or game replays in future.
 
