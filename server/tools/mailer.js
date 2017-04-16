@@ -9,7 +9,7 @@ module.exports = {
 		var appName = 'Secret Hitler Online';
 		var passcodeMail = new SendGrid.Email({
 			to: email,
-			from: process.env.FROM_EMAIL,
+			from: process.env.SENDGRID_FROM_EMAIL,
 			subject: passcode,
 			text: ' ',
 			html: ' ',
@@ -23,7 +23,7 @@ module.exports = {
 			'templates': {
 				'settings': {
 					'enable': 1,
-					'template_id': process.env.EMAIL_TEMPLATE,
+					'template_id': process.env.SENDGRID_EMAIL_TEMPLATE,
 				}
 			}
 		});
