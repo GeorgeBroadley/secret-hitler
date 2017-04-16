@@ -631,7 +631,7 @@
 		params = {query: 'uid=' + Data.uid + '&auth=' + Data.auth + '&v=' + CommonConsts.VERSION};
 	}
 
-	var socket = SocketIO(Config.TESTING ? 'http://localhost:8004' : process.env.APP_URL, params);
+	var socket = SocketIO(Config.TESTING ? 'http://localhost:8004' : secrethitlerdev.herokuapp.com, params);
 
 	//PUBLIC
 
@@ -8147,7 +8147,7 @@
 		$('#lobby-privacy').toggle(privateGame);
 		if (privateGame) {
 			var gid = data.gid;
-			$('#lobby-private-code').html('<a href="/join/'+gid+'" target="_blank">'+process.env.APP_URL+'/join/<strong>' + gid + '</strong></a>');
+			$('#lobby-private-code').html('<a href="/join/'+gid+'" target="_blank">secrethitlerdev.herokuapp.com/join/<strong>' + gid + '</strong></a>');
 		}
 	};
 

@@ -14,7 +14,7 @@ if (Data.uid && Data.auth) {
 	params = {query: 'uid=' + Data.uid + '&auth=' + Data.auth + '&v=' + CommonConsts.VERSION};
 }
 
-var socket = SocketIO(Config.TESTING ? 'http://localhost:8004' : process.env.APP_URL, params);
+var socket = SocketIO(Config.TESTING ? 'http://localhost:8004' : 'https://secrethitlerdev.herokuapp.com', params);
 
 //PUBLIC
 
