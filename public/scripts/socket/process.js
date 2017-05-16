@@ -12,6 +12,8 @@ var Players = require('game/players');
 var Policies = require('game/policies');
 var State = require('game/state');
 
+var Audio = require('util/audio');
+
 //LOCAL
 
 var processAction = function(data) {
@@ -19,14 +21,18 @@ var processAction = function(data) {
 	if (action == 'abandoned') {
 		Players.abandoned(data);
 	} else if (action == 'chat') {
-		Chat.addMessage(data);
+//		Audio.chatAlert();
+		Chat.addMessage(data); 
 	} else if (action == 'chancellor chosen') {
+		Audio.chancellorChosenAlert();
 		Players.chancellorChosen(data);
 	} else if (action == 'voted') {
+//		Audio.votedAlert();
 		Game.voteCompleted(data);
 	} else if (action == 'discarded') {
 		Policies.discarded(data);
 	} else if (action == 'enacted') {
+		Audio.enactedAlert();
 		Policies.enacted(data);
 	} else if (action == 'veto requested') {
 		Policies.vetoRequest(data);

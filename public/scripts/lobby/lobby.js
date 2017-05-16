@@ -22,6 +22,8 @@ var Timeout = require('lobby/timeout');
 var Start = require('game/start');
 var State = require('game/state');
 
+var Audio = require('util/audio');
+
 //TIMERS
 
 var countdownInterval, startTime;
@@ -38,6 +40,9 @@ var updateCountdown = function() {
 	if (secondsRemaining < 0) {
 		clearCountdown();
 	} else {
+		if (secondsRemaining < 3) {
+			Audio.gameStartingAlert(secondsRemaining);
+		}
 		$('#lobby-countdown').text('waiting ' + secondsRemaining + ' seconds...');
 	}
 };
@@ -45,6 +50,7 @@ var updateCountdown = function() {
 //LOCAL
 
 var updateLobby = function(data) {
+	clearCountdown();
 	if (data.started) {
 		Timeout.setGameLobby(false);
 		Start.play(data);
@@ -52,8 +58,6 @@ var updateLobby = function(data) {
 	}
 
 	showLobbySection('wait');
-
-	clearCountdown();
 
 	State.players = data.players;
 	var lobbyPlayerCount = data.players.length;
@@ -75,11 +79,10 @@ var updateLobby = function(data) {
 	$('#lobby-players').html(nameList);
 
 	var privateGame = data.private == true;
-	$('#lobby-privacy').toggle(privateGame);
-	if (privateGame) {
-		var gid = data.gid;
-		$('#lobby-private-code').html('<a href="/join/'+gid+'" target="_blank">https://secrethitler.online/join/<strong>' + gid + '</strong></a>');
-	}
+	$('#private-lobby').toggle(privateGame);
+	$('#public-lobby').toggle(!privateGame);
+	var gid = data.gid;
+	$('#lobby-code').html('<a href="/join/'+gid+'" target="_blank">' + Socket.io.uri + 'join/<strong>' + gid + '</strong></a>');
 };
 
 var showLobbySection = function(subsection, forced) {
@@ -96,6 +99,7 @@ var showLobbySection = function(subsection, forced) {
 };
 
 var connectToStart = function() {
+	clearCountdown();
 	$('.chat-container').html('');
 
 	showLobbySection('start', true);

@@ -10,6 +10,7 @@ var Utils = require('./utils');
 //SETUP
 
 Postgres.defaults.parseInt8 = true;
+Postgres.defaults.ssl = true;
 
 var connectURL = Config.LOCAL_DB_URL;
 var dbConfigured = connectURL != '';
@@ -24,7 +25,7 @@ var query = function(statement, params, callback) {
 		if (!client) {
 			if (dbConfigured) {
 				console.error('CLIENT CONNECTION ERROR');
-				console.log(err, client, done);
+				console.log(err, client, connectURL);
 			}
 			done();
 			return;

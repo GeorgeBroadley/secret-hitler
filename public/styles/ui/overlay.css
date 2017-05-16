@@ -98,3 +98,31 @@
 	bottom: 0;
 	right: 16px;
 }
+
+@media (max-width: 500px) {
+	#overlay {
+		top: 25px;
+		bottom: 25px;
+	}
+
+	#overlay .front {
+		top: 30px;
+	}
+
+	#overlay h1 {
+		margin-bottom: 20px;
+		font-size: 40px;
+	}
+
+	#overlay h2 {
+		font-size: 20px;
+	}
+
+	#overlay h3 {
+		margin-bottom: 6px;
+	}
+
+	.tip {
+		font-size: 16px;
+	}
+}

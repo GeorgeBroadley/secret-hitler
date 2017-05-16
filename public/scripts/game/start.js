@@ -64,16 +64,16 @@ var startGame = function(data) {
 		var placeholder = fascistPlaceholders.eq(index);
 		var description = '';
 		if (fascistPower.indexOf('veto') > -1) {
-			description = 'Veto power unlocked<br><br>';
+			description = 'Veto power is unlocked<br><br>';
 		}
 		if (fascistPower.indexOf('peek') > -1) {
-			description += 'President checks the top 3 policy cards';
+			description += 'President examines the top 3 cards';
 		} else if (fascistPower.indexOf('investigate') > -1) {
 			description += 'President investigates a player\'s identity card';
 		} else if (fascistPower.indexOf('election') > -1) {
-			description += 'President chooses the next presidential candidate';
+			description += 'President picks the next presidential candidate';
 		} else if (fascistPower.indexOf('bullet') > -1) {
-			description += 'President kills a player';
+			description += 'President must kill a player';
 		}
 
 		placeholder.data('power', fascistPower);

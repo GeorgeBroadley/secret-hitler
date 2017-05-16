@@ -22,58 +22,54 @@
 </div>
 
 <section id="s-welcome" class="scrolling" style="display:none;">
+	
 	<div id="welcome-splash">
 		<div class="section">
-			<h1>Can you find and stop the...</h1>
-		</div>
-		<img class="wordmark" src="/images/wordmark.png" alt="Secret Hitler">
-		<div class="section">
-			<h2>A dramatic game of political intrigue and betrayal set in 1930's Germany. Players are secretly divided into two teams - liberals and fascists.</h2>
-			<h2>Known only to each other, the fascists coordinate to sow distrust and install their cold-blooded leader. The liberals must find and stop the Secret Hitler before it’s too late.</h2>
-			<h3>Now adapted for online play.</h3>
-		</div>
+			
+<img class="wordmark" src="/images/wordmarkmini.png" alt="Secret Hitler">			
 
-		<div class="section">
-			<h1>Rules</h1>
-			Please familiarize yourself with the rules before playing. The best way to learn is to watch a game played by the creators themselves:
-			<h2><a href="https://www.youtube.com/watch?v=xv8o3Rpovr0" target="_blank">YouTube video</a></h2>
-
-			Alternatively, you can read the rules, if that's more your thing:
-			<h2><a href="https://dl.dropboxusercontent.com/u/502769/Secret_Hitler_Rules.pdf" target="_blank">Rulebook</a></h2>
+	<div class="section">
+		<h3 id="voice-unsupported" style="display:none;">Note: It looks like your browser does not yet support the web standard for voice chat. If you'd like this functionality, please try a browser such as <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a> to play instead.</h3>
+		<button id="start-playing" class="large">Play</button>
+	</div>
+			
+			
+<p></p>			
+			<p>
+			<h2>Secret Hitler is a social deduction game for 5–10 people about finding and stopping the Secret Hitler.</h2>
+			<h2>The majority of players are liberals. If they can learn to trust each other, they have enough votes to control the table and win the game. But some players are fascists. They will say whatever it takes to get elected, enact their agenda, and blame others for the fallout. The liberals must work together to discover the truth before the fascists install their cold-blooded leader and win the game.</h2>
+			</p>
 		</div>
 
 		<div class="section">
-			<h1>About</h1>
-			<h3><a href="http://secrethitler.com" target="_blank">Secret Hitler (secrethitler.com)</a> by Max Temkin, Mike Boxleiter, Tommy Maranges, and Mackenzie Schubert</h3>
-			<h3>Licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons BY-NC-SA 4.0</a></h3>
-			<h3>Online version is <a href="https://github.com/kylecoburn/secret-hitler" target="_blank">open source on GitHub</a></h3>
+			<a href="http://secrethitler.com/assets/Secret_Hitler_Rules.pdf" target="_blank">Download the rules</a>
+		</div>
+
+		<div class="section">
+			<p class="detail">Secret Hitler · © 2016 Goat, Wolf, &amp; Cabbage · CC SA-BY-NC 4.0
+			<br>secrethitler.games · Paul Dolman-Darrall (RoughJustice) · Free to play community</p>
 		</div>
 
 		<hr>
-
-		<div class="section">
-			<h1>Ready to play?</h1>
-			<h3 id="voice-unsupported" style="display:none;">Note: It looks like your browser does not yet support the web standard for voice chat. If you'd like this functionality, please try a browser such as <a href="https://www.google.com/chrome" target="_blank">Google Chrome</a> to play instead.</h3>
-			<button id="start-playing" class="large">Let's Go!</button>
-		</div>
 	</div>
 
 	<div id="welcome-signin" style="display:none;">
-		<h1>Secret&nbsp;Hitler Online</h1>
+		<img class="wordmark" src="/images/wordmarkmini.png" alt="Secret Hitler">	
 		<div id="s-signin-email" class="sd-signin">
 			<form id="signin-start-form">
-				<h2>Enter your email to begin:</h2>
+				<h2>Please enter your email to play:</h2>
 				<input class="full input-signin" id="i-signin-email" type="email" placeholder="example@email.com" maxlength="254" /> <div class="input-error mini">Invalid email, please try again</div>
 				<button type="submit" class="large">submit</button>
 			</form>
-			<p>Alternatively, use a guest account to try it out:</p>
-			<button id="guest-signin" class="large">sign in as guest</button>
+			A valid email is required to sign back in later
+<!-- ••• GUEST ACCESS	<p>Alternatively, use a guest account to try it out:</p>
+			<button id="guest-signin" class="large">sign in as guest</button> .  -->
 		</div>
 		<div id="s-signin-passkey" class="sd-signin">
 			<h2>Welcome back, <span class="signin-email-address">a@a.a</span>!</h2>
 			<h3 class="faint">Wrong email? <button class="signin-restart">try again</button></h3>
 
-			<input class="full input-signin" id="i-signin-passkey" type="number" placeholder="6-digit passkey" maxlength="6" autocomplete="none" /> <div class="input-error mini">Passkey must be exactly 6 digits (0-9)</div>
+			<input class="full input-signin" id="i-signin-passkey" placeholder="6-digit passkey" maxlength="6" autocomplete="none" /> <div class="input-error mini">Passkey must be exactly 6 digits (0-9)</div>
 			<h3>Your passkey has been emailed to you. Please enter it to complete your sign in.</h3>
 		</div>
 		<div id="s-signin-username" class="sd-signin">
@@ -84,19 +80,26 @@
 			<input class="full input-signin" id="i-signin-username" placeholder="username" maxlength="12" /> <div class="input-error mini"></div>
 			<h3 class="faint">Provide 4 - 12 letters, numbers, and up to one space</h3>
 		</div>
+		<br>
+		<div class="section">
+			<br>
+			<p class="detail">Secret Hitler · © 2016 Goat, Wolf, &amp; Cabbage · CC SA-BY-NC 4.0
+			<br>secrethitler.games · Paul Dolman-Darrall (RoughJustice) · Free to play community</p>
+		</div>
+		
 	</div>
 </section>
 
 <section id="s-lobby" style="display:none;">
 	<div id="lobby-start">
-		<h1>Choose a gameplay option</h1>
+		<img class="wordmark" src="/images/wordmarkmini.png" alt="Secret Hitler">	
+		<p><h1>Choose a gameplay option</h1>
 		<button id="lobby-button-quick-play" class="large">Quick play</button>
 		<br>
 		<button id="lobby-button-create" class="large">Create game</button>
 		<br>
 		<button id="lobby-button-join-private" class="large">Join private game</button>
 		<hr>
-		<p class="detail"><span id="lobby-count-online"></span> online <span id="lobby-count-details">(<span id="lobby-count-playing"></span> playing, <span id="lobby-count-lobby"></span> in lobby)</span></p>
 		<ul id="lobby-open-games">
 		</ul>
 		<div id="lobby-open-games-empty">
@@ -105,9 +108,16 @@
 		</div>
 		<hr>
 		<button id="lobby-button-signout" class="large">Sign out</button>
-		<p class="detail">Secret&nbsp;Hitler Online v<span class="version-name"></span>β</p>
+		<div class="section">
+		<br>
+		<p class="detail">Secret Hitler · © 2016 Goat, Wolf, &amp; Cabbage · CC SA-BY-NC 4.0
+		<br>secrethitler.games · Paul Dolman-Darrall (RoughJustice) · Free to play community</p>
+		</div>
+		<p class="detail">Join the <a href="https://discord.gg/012m9RXabVhNaKyGm" target="_blank" style="font-weight: 700">Discord community!</a>
+			</p>
 	</div>
 	<div id="lobby-create">
+		<img class="wordmark" src="/images/wordmarkmini.png" alt="Secret Hitler">
 		<h1>Host a custom game</h1>
 		<button class="lobby-leave large">cancel</button>
 		<hr>
@@ -130,6 +140,7 @@
 		<button id="lobby-create-confirm" class="large">submit</button>
 	</div>
 	<div id="lobby-join-private">
+		<img class="wordmark" src="/images/wordmarkmini.png" alt="Secret Hitler">
 		<h1>Join a private game</h1>
 		<button class="lobby-leave large">cancel</button>
 		<hr>
@@ -146,13 +157,17 @@
 			</div>
 		</div>
 		<div id="lobby-wait-top" class="background">
+			<img class="wordmark" src="/images/wordmarkmini.png" alt="Secret Hitler">
 			<h1>Waiting for players</h1>
-			<div id="lobby-privacy">
-				<h2>Private game</h2>
-				<div id="lobby-private-code"></div>
+				<div id="private-lobby">
+					<h2>Private game</h2>
+				</div>
+				<div id="public-lobby">
+					<h2>Public game</h2>
+				</div>
+				<div id="lobby-code"></div>
 				<div class="detail">Send the url to your friends so they can join, or have them enter the code manually</div>
 				<br>
-			</div>
 			<button class="lobby-leave large">leave game</button>
 			<h2><span id="lobby-player-summary">? of ?</span> max players</h2>
 			<h3 id="lobby-countdown"></h3>
@@ -163,6 +178,10 @@
 		<div id="chat-container-lobby" class="chat-container chat-background">
 		</div>
 	</div>
+		<div class="section">
+			<p>Secret Hitler · © 2016 Goat, Wolf, &amp; Cabbage · CC SA-BY-NC 4.0 ·
+			<br>secrethitler.games · Paul Dolman-Darrall (RoughJustice) · Free to play community ·</p>
+		</div>
 </section>
 
 <section id="s-game" style="display:none;">
@@ -175,8 +194,6 @@
 
 		<div id="game-area">
 			<div id="game-mat">
-				<div id="players" class="scrolling">
-				</div>
 
 				<div id="board-container">
 					<div id="board">
@@ -217,6 +234,15 @@
 					</div>
 				</div>
 
+        <div id="mobile-tabs">
+          <a href="#" class="selected">
+            Roles</a><a href="#">
+            Chat</a>
+        </div>
+
+        <div id="players" class="scrolling">
+        </div>
+
 				<div id="player-cards">
 					<div id="cards-position">
 						<div id="card-president" class="card" style="display:none;">President</div>
@@ -252,9 +278,6 @@
 					<div class="front info"></div>
 				</div>
 				<div id="overlay-menu" class="toggle-section front">
-					<p id="version">
-						Secret&nbsp;Hitler Online v<span class="version-name"></span>β
-					</p>
 					<button id="menu-issues" class="large">issue tracker</button>
 					<button class="menu-feedback large">feedback</button>
 					<button id="menu-about" class="large">about</button>
@@ -288,8 +311,9 @@
 					<h4>Graphic design</h4>
 					Mackenzie Schubert
 					<h4>Online adaptation</h4>
+					Paul Dolman-Darrall
 					Kyle Coburn
-					<h4><a href="https://github.com/kylecoburn/secret-hitler">Open Source on GitHub</a></h4>
+					<h4><a href="https://github.com/pdarrall/secret-hitler">Open Source on GitHub</a></h4>
 					<button class="menu-back large">back</button>
 				</div>
 			</div>
@@ -299,7 +323,7 @@
 
 <div id="chat-box" style="display:none;">
 	<input id="i-chat" class="chat-mutable" type="text" placeholder="💬" maxlength="255" />
-	<div id="voice-button" class="chat-mutable chat-button">🎙</div>
+<!---	<div id="voice-button" class="chat-mutable chat-button">🎙</div> .  --->
 	<div id="menu-button" class="chat-button"></div>
 </div>
 

@@ -31,9 +31,26 @@ module.exports = {
 	},
 
 	emitTo: function(uid, name, data) {
-		Socket.to(privateRoomName(uid)).emit(name, data);
+		        var safeData = JSON.parse(JSON.stringify(data));
+       			var userInGovt = false;
+       		if (safeData.history) {
+       		safeData.history.forEach(function(event) {
+                if (event.action === 'chancellor chosen') {
+                   userInGovt = (uid === event.president || uid === event.chancellor);
+                   console.log('userInGovt', userInGovt);
+               } else if (event.action === 'discarded') {
+                   if (!userInGovt) {
+                       delete event.secret;
+                   }
+               }
+           });
+       }
+       Socket.to(privateRoomName(uid)).emit(name, safeData);
 	},
 
+
+	
+	
 	data: function(uid, key, value) {
 		var playerData = playersData[uid];
 		if (!playerData) {
